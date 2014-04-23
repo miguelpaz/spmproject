@@ -6,6 +6,8 @@ Hence: Sensor Party Music Project... a evolving brainstorm on how to use sensors
 
 Join me on getting @mihi-tr to pursue this crazy awesome idea and help him if you want to :)
 
+Update april 23, 2014: As you can see below, @mihi-tr started to work on the idea. You can join, too. 
+
 ## The Idea
 
 Genetic algorithms are fantastic - based on scoring mechanisms they are
