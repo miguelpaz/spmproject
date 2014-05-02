@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="buttonBoard" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="addons/;src/;build config/;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/$(PROJECT_NAME)_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj/Debug/" />
+				<Option external_deps="../../../libs/openFrameworksCompiled/lib/linux64/libopenFrameworksDebug.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+			</Target>
+			<Target title="Release">
+				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj/Release/" />
+				<Option external_deps="../../../libs/openFrameworksCompiled/lib/linux64/libopenFrameworks.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+			</Target>
+		</Build>
+		<Unit filename="../../../addons/ofxTonic/src/Tonic.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ADSR.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ADSR.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Arithmetic.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Arithmetic.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/BasicDelay.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/BasicDelay.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/BufferFiller.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/BufferFiller.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/CombFilter.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/CombFilter.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/CompressorLimiter.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/CompressorLimiter.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlArithmetic.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlArithmetic.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlChangeNotifier.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlChangeNotifier.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlComparison.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlComparison.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlConditioner.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlConditioner.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlCounter.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlCounter.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlDbToLinear.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlDbToLinear.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlDelay.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlDelay.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlFloor.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlFloor.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlGenerator.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlGenerator.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlMetro.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlMetro.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlMetroDivider.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlMetroDivider.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlMidiToFreq.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlMidiToFreq.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlParameter.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlParameter.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlPrinter.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlPrinter.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlPulse.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlPulse.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlRandom.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlRandom.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlRecorder.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlRecorder.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlSnapToScale.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlSnapToScale.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlStepper.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlStepper.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlSwitcher.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlSwitcher.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlTrigger.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlTrigger.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlValue.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlValue.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlXYSpeed.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/ControlXYSpeed.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/DelayUtils.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/DelayUtils.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Effect.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Effect.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/FilterUtils.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/FilterUtils.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Filters.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Filters.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/FixedValue.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/FixedValue.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Generator.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Generator.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/LFNoise.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/LFNoise.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Mixer.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Mixer.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/MonoToStereoPanner.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/MonoToStereoPanner.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Noise.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Noise.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/RampedValue.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/RampedValue.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/RectWave.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/RectWave.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Reverb.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Reverb.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/RingBuffer.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/RingBuffer.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/SampleTable.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/SampleTable.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/SawtoothWave.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/SawtoothWave.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/SineWave.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/SineWave.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/SquareWave.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/StereoDelay.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/StereoDelay.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Synth.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/Synth.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/TableLookupOsc.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/TableLookupOsc.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/TonicCore.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/TonicFrames.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/TonicFrames.h" />
+		<Unit filename="../../../addons/ofxTonic/src/Tonic/TriangleWave.h" />
+		<Unit filename="../../../addons/ofxTonic/src/ofxTonic.h" />
+		<Unit filename="../../../addons/ofxTonic/src/ofxTonicSynth.cpp" />
+		<Unit filename="../../../addons/ofxTonic/src/ofxTonicSynth.h" />
+		<Unit filename="config.make">
+			<Option virtualFolder="build config" />
+		</Unit>
+		<Unit filename="src/main.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/ofApp.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/ofApp.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
