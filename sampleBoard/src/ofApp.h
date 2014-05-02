@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "buttonBoard.h"
+#include "Samples.h"
 
 class ofApp : public ofBaseApp{
 	public:
@@ -21,4 +22,5 @@ class ofApp : public ofBaseApp{
 
 		float framerate;
 		buttonBoard bb;
+		Samples s;
 };

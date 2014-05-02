@@ -6,12 +6,17 @@ void ofApp::setup(){
     ofSetFrameRate(framerate);
     bb=buttonBoard();
     bb.setup();
+    s.setup();
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     bb.update(1.0/framerate);
+    s.update();
+    if (bb.newCol()) {
+        s.play(bb.getActiveCol());
+    }
 
 
 }
