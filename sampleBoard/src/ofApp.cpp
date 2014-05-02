@@ -2,17 +2,23 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    framerate=60.0;
+    ofSetFrameRate(framerate);
+    bb=buttonBoard();
+    bb.setup();
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    bb.update(1.0/framerate);
+
 
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    bb.draw();
 }
 
 //--------------------------------------------------------------
@@ -37,6 +43,9 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
+    if (button==0) {
+            bb.mousePressed(x,y,button);
+    }
 
 }
 
@@ -56,6 +65,6 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
