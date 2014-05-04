@@ -4,10 +4,6 @@ Can robots play music you like? http://www.fastcolabs.com/3029276/can-robot-musi
 
 Hence: Sensor Party Music Project... a evolving brainstorm on how to use sensors to create the ultimate dance music experience in a Sensor Party near you. 
 
-Join me on getting @mihi-tr to pursue this crazy awesome idea and help him if you want to :)
-
-Update april 23, 2014: As you can see below, @mihi-tr started to work on the idea. You can join, too. 
-
 ## The Idea
 
 Genetic algorithms are fantastic - based on scoring mechanisms they are
@@ -27,8 +23,7 @@ but thrilling.
 
 ## How we can build it
 
-Work on Genetic Algorithms to produce music - ideally using something like
-Processing or OpenFrameworks (the latter can also be used to read in the
+Work on Genetic Algorithms to produce music using OpenFrameworks (the latter can also be used to read in the
 sensor)
 
 Then figure out how to do sensors - use mobile phones with an app that
@@ -48,3 +43,11 @@ How:
 * Contribute Code - Fork us on Github and figure out how to do parts
 * Share your ideas: In issues or on the wiki!
 * Test and review what is already there.
+
+## Using
+
+The spmproject repository is designed to be cloned into the ```apps```
+subdirectory of your [OpenFrameworks](http://openframeworks.cc) folder.
+Currently the files are layed out for code::blocks on linux. If you work
+with Xcode or on Windows - feel free to add project files to help
+development accross platforms.
