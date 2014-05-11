@@ -18,7 +18,6 @@ void buttonBoard::setup()
     width=ofGetWindowWidth();
     height=ofGetWindowHeight();
     float w=min(width,height);
-    cout << width << ":" << height << ":" << w << endl;
     cw=int(w/BB_COLS);
     rh=int(w/BB_ROWS);
     border=10.0;
@@ -27,6 +26,7 @@ void buttonBoard::setup()
     for (int i=0; i< BB_COLS; i++ ){
         s[i]=0;
     }
+    cnt=0;
 
 
 }
@@ -37,6 +37,7 @@ void buttonBoard::update(float dt)
     time+=dt;
     int newcol=int(time*speed)%BB_COLS;
     if (column!=newcol) {
+            if (newcol==0) { cnt++; };
             nc=true;
             column=newcol;
     }
@@ -105,4 +106,17 @@ int64_t buttonBoard::getActiveCol()
 bool buttonBoard::newCol()
 {
     return nc;
+}
+
+int buttonBoard::getCount()
+{
+    return cnt;
+}
+
+void buttonBoard::setSample(int64_t ns[BB_COLS])
+{
+    for(int i=0;i<BB_COLS;i++){
+        s[i]=ns[i];
+    }
+    cnt=0;
 }

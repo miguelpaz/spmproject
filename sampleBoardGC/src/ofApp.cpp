@@ -4,9 +4,12 @@
 void ofApp::setup(){
     framerate=60.0;
     ofSetFrameRate(framerate);
-    bb=buttonBoard();
     bb.setup();
     s.setup();
+    gp.setup();
+
+    // set initial sample
+    setNewSample(gp.getNext());
 
 }
 
@@ -17,7 +20,9 @@ void ofApp::update(){
     if (bb.newCol()) {
         s.play(bb.getActiveCol());
     }
-
+    if (bb.getCount()>1) {
+        setNewSample(gp.getNext());
+    }
 
 }
 
@@ -72,4 +77,13 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){
 
+}
+
+void ofApp::setNewSample(Individual in)
+{
+    int64_t dna[BB_COLS];
+    for (int i=0; i<BB_COLS; i++){
+        dna[i]=in.dna[i%IND_SIZE];
+    }
+    bb.setSample(dna);
 }
