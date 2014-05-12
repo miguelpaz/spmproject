@@ -18,6 +18,8 @@ class buttonBoard
         void toggleButton(int row, int col);
         int64_t getActiveCol();
         bool newCol();
+        int getCount();
+        void setSample(int64_t ns[BB_COLS]);
     protected:
     private:
         float cw;
@@ -30,6 +32,10 @@ class buttonBoard
         float height;
         int column;
         bool nc;
+        int cnt;
+        ofFbo fbo;
+        float mx; // margin
+        float my;
 };
 
 #endif // BUTTONBOARD_H
