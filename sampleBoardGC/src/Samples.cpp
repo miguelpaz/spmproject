@@ -30,7 +30,7 @@ void Samples::update()
 void Samples::play(int64_t d)
 {
     for(int i=0; i<64; i++)
-    if ((d>>i) & 1 == 1) {
+    if (((d>>i) & 1) == 1) {
         sample[i].play();
         sample[i].setVolume(0.5);
     }

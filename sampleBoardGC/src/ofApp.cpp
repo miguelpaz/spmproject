@@ -7,6 +7,7 @@ void ofApp::setup(){
     bb.setup();
     s.setup();
     gp.setup();
+    font.loadFont("FiraSansOT-Light.otf",18);
 
     // set initial sample
     setNewSample(gp.getNext());
@@ -29,6 +30,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     bb.draw();
+    char s[255];
+    sprintf(s,"Generation: %u\nIndividual: %u",gp.generation,gp.icount);
+    font.drawString(s,10,30);
 }
 
 //--------------------------------------------------------------

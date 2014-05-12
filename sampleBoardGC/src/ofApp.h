@@ -27,4 +27,5 @@ class ofApp : public ofBaseApp{
 		buttonBoard bb;
 		Samples s;
 		genePool gp;
+		ofTrueTypeFont font;
 };
