@@ -20,7 +20,10 @@ void buttonBoard::setup()
     float w=min(width,height);
     cw=int(w/BB_COLS);
     rh=int(w/BB_ROWS);
-    border=10.0;
+    mx=(width-64*cw)/2.0; // margins used for centering
+    my=(height-64*rh)/2.0;
+    border=10.0; // border of the single pusbuttons
+    fbo.allocate(cw*64,rh*64,GL_RGBA32F_ARB); //fbo to draw in.
 
     // empty the status
     for (int i=0; i< BB_COLS; i++ ){
@@ -50,12 +53,13 @@ bool buttonBoard::buttonActive(int row, int col)
 // Check whether a button is active.
 {
     int64_t c=s[col];
-    return ((c>>row) & 1 == 1);
+    return (((c>>row) & 1) == 1);
 }
 
 void buttonBoard::draw()
 // draw the board...
 {
+    fbo.begin();
     ofBackground(0,0,0);
 
     for (int col=0;col<BB_COLS; col++){
@@ -75,6 +79,9 @@ void buttonBoard::draw()
             ofRect(col*cw+border,row*rh+border,cw-(border *2),rh-(border * 2));
         }
     }
+
+    fbo.end();
+    fbo.draw(mx,my);
 
 
 }

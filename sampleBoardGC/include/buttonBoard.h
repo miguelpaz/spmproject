@@ -33,6 +33,9 @@ class buttonBoard
         int column;
         bool nc;
         int cnt;
+        ofFbo fbo;
+        float mx; // margin
+        float my;
 };
 
 #endif // BUTTONBOARD_H
