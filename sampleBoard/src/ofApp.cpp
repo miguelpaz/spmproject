@@ -7,7 +7,6 @@ void ofApp::setup(){
     bb=buttonBoard();
     bb.setup();
     s.setup();
-
 }
 
 //--------------------------------------------------------------
@@ -23,6 +22,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    ofBackground(0,0,0);
     bb.draw();
 }
 
