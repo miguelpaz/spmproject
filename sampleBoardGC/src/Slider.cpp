@@ -48,7 +48,6 @@ void Slider::mouseDragged(int x, int y, int button)
             y=y-position.y;
             if ((x > position.x) & (x < position.x + SLIDER_WIDTH) & (y > 0) & (y < SLIDER_HEIGHT + SLIDER_THING)) {
                 int dy=py-y;
-                cout << dy << ":" << ofMap(dy,0,SLIDER_HEIGHT,0,1)<< endl;
                 value+=ofMap(dy,0,SLIDER_HEIGHT,0,1);
             }
             if (value < 0 ) {

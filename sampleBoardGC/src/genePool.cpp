@@ -43,7 +43,6 @@ void genePool::nextGen()
     sort(individuals.begin(),individuals.end(),comphelper);
     while(individuals.size()>10)
         {individuals.erase(individuals.begin() +10);};
-    cout << individuals.size() << endl;
 }
 
 

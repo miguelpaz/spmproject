@@ -15,15 +15,7 @@ void buttonBoard::setup()
 {
     speed=4.0; // columns per second
     time=0.0; // the time counter - to figure out which column we're in.
-    width=ofGetWindowWidth();
-    height=ofGetWindowHeight();
-    float w=min(width,height);
-    cw=int(w/BB_COLS);
-    rh=int(w/BB_ROWS);
-    mx=(width-64*cw)/2.0; // margins used for centering
-    my=(height-64*rh)/2.0;
-    border=10.0; // border of the single pusbuttons
-    fbo.allocate(cw*64,rh*64,GL_RGBA8); //fbo to draw in.
+    windowResize();
 
     // empty the status
     for (int i=0; i< BB_COLS; i++ ){
@@ -34,6 +26,18 @@ void buttonBoard::setup()
 
 }
 
+void buttonBoard::windowResize()
+{
+    width=ofGetWindowWidth();
+    height=ofGetWindowHeight();
+    float w=min(width,height);
+    cw=int(w/BB_COLS);
+    rh=int(w/BB_ROWS);
+    mx=(width-64*cw)/2.0; // margins used for centering
+    my=(height-64*rh)/2.0;
+    border=10.0; // border of the single pusbuttons
+    fbo.allocate(cw*64,rh*64,GL_RGBA8); //fbo to draw in.
+}
 void buttonBoard::update(float dt)
 // update the board.
 {

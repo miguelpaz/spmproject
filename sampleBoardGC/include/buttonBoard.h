@@ -10,6 +10,7 @@ class buttonBoard
     public:
         buttonBoard();
         void setup();
+        void windowResize();
         void update(float dt);
         void draw();
         void getData();
