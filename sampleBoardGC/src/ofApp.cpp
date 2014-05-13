@@ -7,10 +7,12 @@ void ofApp::setup(){
     bb.setup();
     s.setup();
     gp.setup();
+    slider.setup(new ofPoint(10,100));
     font.loadFont("FiraSansOT-Light.otf",18);
 
     // set initial sample
-    setNewSample(gp.getNext());
+    in=gp.getNext();
+    setNewSample(in);
 
 }
 
@@ -21,9 +23,13 @@ void ofApp::update(){
     if (bb.newCol()) {
         s.play(bb.getActiveCol());
     }
-    if (bb.getCount()>1) {
-        setNewSample(gp.getNext());
+    if (bb.getCount()>0) {
+        in.addScore(slider.getValue());
+        in=gp.getNext();
+        setNewSample(in);
+        slider.setValue(0);
     }
+
 
 }
 
@@ -33,6 +39,12 @@ void ofApp::draw(){
     char s[255];
     sprintf(s,"Generation: %u\nIndividual: %u",gp.generation,gp.icount);
     font.drawString(s,10,30);
+    slider.draw();
+    ofPushMatrix();
+    ofTranslate(65,260);
+    ofRotate(90);
+    font.drawString("Score",0,0);
+    ofPopMatrix();
 }
 
 //--------------------------------------------------------------
@@ -52,14 +64,16 @@ void ofApp::mouseMoved(int x, int y){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+    slider.mouseDragged(x,y,button);
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    if (button==0) {
+    slider.mousePressed(x,y,button);
+   /* if (button==0) {
             bb.mousePressed(x,y,button);
-    }
+    } */
+
 
 }
 

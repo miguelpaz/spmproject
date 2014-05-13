@@ -42,6 +42,9 @@
 		<Unit filename="include/Samples.h">
 			<Option virtualFolder="src/" />
 		</Unit>
+		<Unit filename="include/Slider.h">
+			<Option virtualFolder="src/" />
+		</Unit>
 		<Unit filename="include/buttonBoard.h">
 			<Option virtualFolder="src/" />
 		</Unit>
@@ -52,6 +55,9 @@
 			<Option virtualFolder="src/" />
 		</Unit>
 		<Unit filename="src/Samples.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/Slider.cpp">
 			<Option virtualFolder="src/" />
 		</Unit>
 		<Unit filename="src/buttonBoard.cpp">

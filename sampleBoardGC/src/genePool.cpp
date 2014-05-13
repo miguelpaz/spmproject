@@ -7,7 +7,7 @@ genePool::genePool()
 
 void genePool::setup()
 {
-    popsize=100;
+    popsize=15;
     icount=0;
     generation=0;
     for (int i=0;i<popsize;i++){
@@ -28,9 +28,23 @@ Individual genePool::getNext()
     return in;
 }
 
+bool comphelper(Individual i, Individual j)
+// helper function for sorting
+{
+    return (i.averageScore() > j.averageScore());
+}
+
 void genePool::nextGen()
 {
+
     generation++;
     icount=0;
-    // Add genetic selection and mating process here.
+    // Add genetic selection - find the top 10 individuals...
+    sort(individuals.begin(),individuals.end(),comphelper);
+    while(individuals.size()>10)
+        {individuals.erase(individuals.begin() +10);};
+    cout << individuals.size() << endl;
 }
+
+
+

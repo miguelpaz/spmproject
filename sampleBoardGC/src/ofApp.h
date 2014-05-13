@@ -5,6 +5,7 @@
 #include "Samples.h"
 #include "genePool.h"
 #include "Individual.h"
+#include "Slider.h"
 
 class ofApp : public ofBaseApp{
 	public:
@@ -28,4 +29,6 @@ class ofApp : public ofBaseApp{
 		Samples s;
 		genePool gp;
 		ofTrueTypeFont font;
+		Slider slider;
+		Individual in;
 };

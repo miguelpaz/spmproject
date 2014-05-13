@@ -9,11 +9,15 @@ class Individual
     public:
         Individual();
         void setup();
-        float score;
+        void addScore(float s);
         Individual mateWith(Individual other);
         int64_t dna[IND_SIZE];
+        float averageScore();
     protected:
     private:
+        vector<float> score;
+        float averagescore;
+
 };
 
 #endif // INDIVIDUAL_H

@@ -7,6 +7,7 @@ Individual::Individual()
 
 void Individual::setup()
 {
+    averagescore=-1;
     for(int i=0;i<IND_SIZE;i++)
     {
         dna[i]=0;
@@ -18,5 +19,25 @@ void Individual::setup()
             }
         }
     }
+}
+
+void Individual::addScore(float s)
+{
+    score.push_back(s);
+}
+
+float Individual::averageScore()
+// a memoized calculation of the average score...
+{
+    if (averagescore<0)
+        {
+            float sum=0;
+            for(int i=0;i<score.size();i++)
+            {
+                sum+=score[i];
+            }
+            averagescore=sum/score.size();
+        }
+    return averagescore;
 }
 
