@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="sampleBoard" />
+		<Option title="sampleBoardGC" />
 		<Option makefile_is_custom="1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
@@ -16,6 +16,9 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
@@ -25,16 +28,42 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add directory="include" />
+				</Compiler>
 			</Target>
 		</Build>
 		<Unit filename="config.make">
 			<Option virtualFolder="build config" />
 		</Unit>
+		<Unit filename="include/Individual.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="include/Samples.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="include/Slider.h">
+			<Option virtualFolder="src/" />
+		</Unit>
 		<Unit filename="include/buttonBoard.h">
 			<Option virtualFolder="src/" />
 		</Unit>
-		<Unit filename="src/Samples.cpp" />
+		<Unit filename="include/genePool.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/Individual.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/Samples.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/Slider.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
 		<Unit filename="src/buttonBoard.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/genePool.cpp">
 			<Option virtualFolder="src/" />
 		</Unit>
 		<Unit filename="src/main.cpp">
