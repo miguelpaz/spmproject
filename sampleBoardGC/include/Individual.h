@@ -14,6 +14,7 @@ class Individual
         int64_t dna[IND_SIZE];
         float averageScore();
         Individual reproduce_with(Individual other);
+        void mutate();
     protected:
     private:
         vector<float> score;

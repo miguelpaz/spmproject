@@ -74,7 +74,9 @@ void genePool::nextGen()
     for (int i = 0; i<popsize; i++) {
         Individual a = weightedRandomIndividual(reproducers);
         Individual b = weightedRandomIndividual(reproducers);
-        individuals.push_back(a.reproduce_with(b));
+        Individual in = a.reproduce_with(b);
+        in.mutate();
+        individuals.push_back(in);
     }
 }
 

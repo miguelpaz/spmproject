@@ -56,4 +56,18 @@ Individual Individual::reproduce_with(Individual other) {
         ni.dna[i] = (dna[i] & mask) | (other.dna[i] & ~mask);
     }
     return ni;
+}
+
+void Individual::mutate() {
+    for (int i=0; i<IND_SIZE;i++) {
+        int64_t mask = 0;
+        for (int j = 0; j< 64; j++) {
+            mask = mask << 1;
+            float rnd = ofRandom(1000);
+            if (rnd<=SMP_PROB) {
+                mask = mask | 1;
+            }
+        }
+        dna[i] = dna[i] ^ mask;
     }
+}
