@@ -51,3 +51,16 @@ subdirectory of your [OpenFrameworks](http://openframeworks.cc) folder.
 Currently the files are layed out for code::blocks on linux. If you work
 with Xcode or on Windows - feel free to add project files to help
 development accross platforms.
+
+Since code::blocks works with makefiles you could also just install all the
+neccessary tools and call ```make```.
+
+## Requirements
+
+You'll need the [Sonatina Symphony Orchestra](http://sso.mattiaswestlund.net/) 
+samples unpacked in the ```data``` folder inside the ```bin``` subfolder
+once your project is built. These are the samples currently used. Check
+```samples.txt``` for the exact files.
+
+Of course you could use different samples and edit the ```samples.txt```
+file accordingly.
