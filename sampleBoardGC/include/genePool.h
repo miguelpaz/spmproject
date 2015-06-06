@@ -16,10 +16,13 @@ class genePool
         int popsize;
         int icount;
         int repopool;
+        void addScore(float s);
+
     protected:
     private:
         vector<Individual> individuals;
         bool comp(Individual i, Individual j);
+        Individual weightedRandomIndividual(vector<Individual> r);
 };
 
 #endif // GENEPOOL_H

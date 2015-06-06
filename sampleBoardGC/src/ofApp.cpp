@@ -37,7 +37,7 @@ void ofApp::update(){
 void ofApp::draw(){
     bb.draw();
     char s[255];
-    sprintf(s,"Generation: %u\nIndividual: %u",gp.generation,gp.icount);
+    sprintf(s,"Generation: %u\nIndividual: %u",gp.generation,gp.icount+1);
     font.drawString(s,10,30);
     slider.draw();
     ofPushMatrix();
@@ -79,7 +79,7 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+    gp.addScore(slider.getValue());
 }
 
 //--------------------------------------------------------------

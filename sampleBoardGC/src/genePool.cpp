@@ -7,10 +7,10 @@ genePool::genePool()
 
 void genePool::setup()
 {
-    popsize=15;
-    icount=0;
-    generation=0;
+    popsize=20;
     repopool=10;
+    icount=-1;
+    generation=0;
     for (int i=0;i<popsize;i++){
         Individual in;
         in.setup();
@@ -21,12 +21,11 @@ void genePool::setup()
 Individual genePool::getNext()
 // return the next individual in the pool.
 {
-    Individual in=individuals[icount];
     icount++;
     if (icount>=popsize) {
             nextGen();
     }
-    return in;
+    return individuals[icount];
 }
 
 bool comphelper(Individual i, Individual j)
@@ -34,6 +33,29 @@ bool comphelper(Individual i, Individual j)
 {
     return (i.averageScore() > j.averageScore());
 }
+
+Individual genePool::weightedRandomIndividual(vector<Individual> r) {
+    float total_score = 0;
+    float cs = 0;
+    float ts;
+    int ci = 0;
+    Individual in;
+
+    for (int i=0; i<r.size(); i++) {
+
+        total_score = total_score + r[i].averageScore();
+    }
+
+    ts = ofRandom(total_score);
+
+    while(cs<ts) {
+        in = r[ci];
+        cs = cs + in.averageScore();
+        ci++;
+    }
+
+    return in;
+    };
 
 void genePool::nextGen()
 {
@@ -50,11 +72,15 @@ void genePool::nextGen()
             individuals.erase(individuals.begin());
     }
     for (int i = 0; i<popsize; i++) {
-        int a = ofRandom(repopool);
-        int b = ofRandom(repopool);
-        individuals.push_back(reproducers[a].reproduce_with(reproducers[b]));
+        Individual a = weightedRandomIndividual(reproducers);
+        Individual b = weightedRandomIndividual(reproducers);
+        individuals.push_back(a.reproduce_with(b));
     }
 }
+
+void genePool::addScore(float s) {
+    individuals[icount].addScore(s);
+    }
 
 
 
