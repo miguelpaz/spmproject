@@ -41,3 +41,12 @@ float Individual::averageScore()
     return averagescore;
 }
 
+Individual Individual::reproduce_with(Individual other) {
+    Individual ni = Individual();
+    int op = ofRandom(64);
+    int64_t mask = INT64_MAX << op;
+    for (int i; i<IND_SIZE; i++) {
+        ni.dna[i] = (dna[i] & mask) | (other.dna[i] & ~mask);
+    }
+    return ni;
+    }

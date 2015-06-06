@@ -13,7 +13,7 @@ buttonBoard::buttonBoard()
 
 void buttonBoard::setup()
 {
-    speed=4.0; // columns per second
+    speed=16.0; // columns per second
     time=0.0; // the time counter - to figure out which column we're in.
     windowResize();
 

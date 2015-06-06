@@ -33,6 +33,7 @@
 		<Unit filename="include/buttonBoard.h">
 			<Option virtualFolder="src/" />
 		</Unit>
+		<Unit filename="src/Samples.cpp" />
 		<Unit filename="src/buttonBoard.cpp">
 			<Option virtualFolder="src/" />
 		</Unit>

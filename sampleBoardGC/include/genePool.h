@@ -15,6 +15,7 @@ class genePool
         int generation;
         int popsize;
         int icount;
+        int repopool;
     protected:
     private:
         vector<Individual> individuals;

@@ -13,6 +13,7 @@ class Individual
         Individual mateWith(Individual other);
         int64_t dna[IND_SIZE];
         float averageScore();
+        Individual reproduce_with(Individual other);
     protected:
     private:
         vector<float> score;

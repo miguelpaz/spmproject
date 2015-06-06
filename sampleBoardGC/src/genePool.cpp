@@ -10,6 +10,7 @@ void genePool::setup()
     popsize=15;
     icount=0;
     generation=0;
+    repopool=10;
     for (int i=0;i<popsize;i++){
         Individual in;
         in.setup();
@@ -36,13 +37,23 @@ bool comphelper(Individual i, Individual j)
 
 void genePool::nextGen()
 {
+    vector<Individual> reproducers;
 
     generation++;
     icount=0;
     // Add genetic selection - find the top 10 individuals...
     sort(individuals.begin(),individuals.end(),comphelper);
-    while(individuals.size()>10)
-        {individuals.erase(individuals.begin() +10);};
+    for(int i = 0; i<repopool; i++) {
+        reproducers.push_back(individuals[i]);
+    }
+    while(individuals.size()>0) {
+            individuals.erase(individuals.begin());
+    }
+    for (int i = 0; i<popsize; i++) {
+        int a = ofRandom(repopool);
+        int b = ofRandom(repopool);
+        individuals.push_back(reproducers[a].reproduce_with(reproducers[b]));
+    }
 }
 
 
